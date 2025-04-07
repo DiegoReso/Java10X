@@ -1,4 +1,4 @@
-package Colecoes;
+package NivelBasico.TiposDeDados.Colecoes;
 
 import java.util.Scanner;
 

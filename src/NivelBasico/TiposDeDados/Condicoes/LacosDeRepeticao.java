@@ -1,4 +1,4 @@
-package Condicoes;
+package NivelBasico.TiposDeDados.Condicoes;
 
 public class LacosDeRepeticao {
     public static void main(String[] args) {
