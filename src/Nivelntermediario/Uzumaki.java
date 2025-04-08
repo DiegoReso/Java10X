@@ -9,4 +9,8 @@ public class Uzumaki extends Ninja{
         System.out.println("Meu nome eh " + this.getName() + " e estou ativando o modo sabio");
     }
 
+    @Override
+    void habilidadeEspecial() {
+        System.out.println("Habilidade especial dos Uzumaki");
+    }
 }

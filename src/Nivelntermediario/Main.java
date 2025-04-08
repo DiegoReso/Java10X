@@ -3,8 +3,8 @@ package Nivelntermediario;
 public class Main {
     public static void main(String[] args) {
         //Criar ninja Naruto
-        Ninja ninja = new Ninja("Naruto", 20, "Folha");
-         ninja.getName();
+        Ninja ninja = new Ninja("Ninja", 20, "Folha");
+        System.out.println(ninja.getName());
         System.out.println(ninja.anosParaSerHokage(30));
 
         Uchiha sasuke = new Uchiha("Sasuke", 18,"Folha");
@@ -17,6 +17,7 @@ public class Main {
         boruto.ativarOKarma();
         boruto.ativarJourgan();
         boruto.ativarModoSabio();
+        boruto.habilidadeEspecial(); //habilidade usando polimorfismo
 
     }
 }

@@ -18,4 +18,8 @@ public class Ninja {
     Integer anosParaSerHokage(Integer age){
         return age - this.age  ;
     }
+
+    void habilidadeEspecial(){
+        System.out.println("Meu nome eh " + name + " e esse eh meu ataque especial!" );
+    }
 }
