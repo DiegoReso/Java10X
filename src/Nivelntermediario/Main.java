@@ -19,5 +19,8 @@ public class Main {
         boruto.ativarModoSabio();
         boruto.habilidadeEspecial(); //habilidade usando polimorfismo
 
+        //utilizando classe abstrata
+        Seju tobirama = new Seju("tobirama", 33, "Folhas");
+        tobirama.sabedoriaHokage();
     }
 }
