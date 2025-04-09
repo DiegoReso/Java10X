@@ -2,18 +2,24 @@ package Objetos;
 
 public class Uzumaki extends Ninja{
 
+    Biju biju;
+
     public Uzumaki() {
     }
 
-    public Uzumaki(Integer age, String name) {
+    public Uzumaki(String name, Integer age) {
         super(name, age);
     }
 
     //sobrevarga construtor
-    public Uzumaki(Integer age, String name, Integer numeroMissoesConcluidas, NivelNinja rank) {
-        super(age, name, numeroMissoesConcluidas, rank);
+    public Uzumaki(String name,Integer age, Integer numeroMissoesConcluidas, NivelNinja rank) {
+        super(name,age, numeroMissoesConcluidas, rank);
     }
-
+    //sobrecarga para adicionar Bijus
+    public Uzumaki(String name,Integer age, Integer numeroMissoesConcluidas, NivelNinja rank,Biju biju) {
+        super(name,age, numeroMissoesConcluidas, rank);
+        this.biju = biju;
+    }
 
 
     @Override

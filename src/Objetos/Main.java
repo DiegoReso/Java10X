@@ -2,9 +2,7 @@ package Objetos;
 
 public class Main {
     public static void main(String[] args) {
-        Uzumaki naruto =  new Uzumaki();
-        naruto.name = "Naruto";
-        naruto.age = 17;
+        Uzumaki naruto =  new Uzumaki("Naruto",17,2,NivelNinja.GENNIN, Biju.KUROMA);
         naruto.soltarMagia();
         naruto.estrategiaNinja();
         naruto.estrategiaDeBatalha();
@@ -18,12 +16,10 @@ public class Main {
         kakashi.numeroMissoesConcluidas = 2;
         kakashi.rank = NivelNinja.CHUNNIN;
 
-        Uchiha ninjaUchiha = new Uchiha(17,"NinjavUchiha", 2,NivelNinja.JOUNNIN);
+        Uchiha ninjaUchiha = new Uchiha("NinjaUchiha",17, 2,NivelNinja.JOUNNIN);
         ninjaUchiha.estrategiaNinja();
-
-
-
+        ninjaUchiha.estrategiaDeBatalha(90);
+        ninjaUchiha.estrategiaDeBatalha();
+        ninjaUchiha.tacarKunai();
     }
-
-
 }
