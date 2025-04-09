@@ -15,12 +15,11 @@ public class Uzumaki extends Ninja{
     public Uzumaki(String name,Integer age, Integer numeroMissoesConcluidas, NivelNinja rank) {
         super(name,age, numeroMissoesConcluidas, rank);
     }
-    //sobrecarga para adicionar Bijus
+    //sobrecarga para adicionar Biju
     public Uzumaki(String name,Integer age, Integer numeroMissoesConcluidas, NivelNinja rank,Biju biju) {
         super(name,age, numeroMissoesConcluidas, rank);
         this.biju = biju;
     }
-
 
     @Override
     void estrategiaNinja() {
