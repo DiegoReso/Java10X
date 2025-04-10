@@ -14,5 +14,13 @@ public class Main {
         bolsaGenerica.adicionarEquipamento(escudo);
         System.out.println(bolsaGenerica);
 
+
+        BolsaNinja<EquipamentosNinja> bolsaNinja =  new BolsaNinja();
+        bolsaNinja.adicionarItem(new EquipamentosNinja("Shuriken"));
+        bolsaNinja.adicionarItem(new EquipamentosNinja("Pergaminho"));
+        System.out.println(bolsaNinja);
+        bolsaNinja.getItens();
+
+
     }
 }
