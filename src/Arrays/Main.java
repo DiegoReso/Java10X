@@ -17,7 +17,5 @@ public class Main {
         ninjas.set(0, "Naruto Rei delas");
         System.out.println("Ninjas Lista: " + ninjas);
         System.out.println(ninjas.size());
-
-
     }
 }
