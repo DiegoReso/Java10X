@@ -2,6 +2,7 @@ package SetList;
 
 
 import java.util.HashSet;
+
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -27,5 +28,6 @@ public class Main {
         ninjaTreeSet.addAll(ninjaSet);
         System.out.println(ninjaTreeSet);
         System.out.println("**********Ninja Tree SET************");
+
     }
 }
