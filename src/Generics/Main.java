@@ -60,8 +60,8 @@ public class Main {
         arrayStrings[3] = "Camaro";
 
         imprimirArray(arrayStrings);
-
-        imprimirGenerico("Oin ");
+        System.out.println("");
+        System.out.println(imprimirGenerico("Oin "));
         imprimirGenerico(5000L);
         imprimirGenerico(654654654F);
         imprimirGenerico("Naruto iamazaki");
@@ -77,7 +77,7 @@ public class Main {
         }
     }
 
-    public static <T> void imprimirGenerico(T elemento){
-        System.out.println(elemento);
+    public static <T> T imprimirGenerico(T elemento){
+        return elemento;
     }
 }
