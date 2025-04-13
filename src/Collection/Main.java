@@ -25,8 +25,10 @@ public class Main {
         System.out.println("Removendo terceiro elemento da List");
         listaDeNomes.remove(2);
         System.out.println(listaDeNomes);
-
+        System.out.println("Pegando primeiro elemento");
+        System.out.println(listaDeNomes.getFirst());
         System.out.println("===========================");
+
         System.out.println("Verificar se contem o que busco em algum elemento");
         System.out.println(listaDeNomes.contains("Diego"));
 
