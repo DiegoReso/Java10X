@@ -1,0 +1,2 @@
+{"nome": "Diego Reis", "telefone": "[Phone{tipo=CELULAR, numero='212546546'}, Phone{tipo=WHATSAPP, numero='56465465464'}]", "endereco": Address{street=' rua dona clovis', number= 15, state=' RJ', zipCode= 6546432}}
+{"nome": "Cailania Reis", "telefone": "[Phone{tipo=CELULAR, numero='88888'}, Phone{tipo=WHATSAPP, numero='7777'}]", "endereco": Address{street=' rua dona clovis', number= 15, state=' RJ', zipCode= 6546432}}
