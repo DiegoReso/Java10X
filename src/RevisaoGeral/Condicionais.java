@@ -9,7 +9,6 @@ public class Condicionais {
         Scanner scanner = new Scanner(System.in);
 
         //do-while
-
         char resp;
         do {
             System.out.print("Entre com a temperatura em Celius: ");
@@ -94,7 +93,5 @@ public class Condicionais {
                 System.out.println("Dia da semana invalido");
                 break;
         }
-
-
     }
 }
