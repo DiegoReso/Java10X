@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class OrientacaoObjetos {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         //ContaBancaria
         ContaBancaria conta1 = new ContaBancaria("1234", "Diego Reso");
 

@@ -5,6 +5,46 @@ import java.util.Scanner;
 public class Vetores {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        //Matrizes
+
+        int[][] matriz = new int[3][4];
+
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                matriz[i][j] = j + 1 ;
+            }
+        }
+
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                System.out.println(matriz[i][j]);
+            }
+        }
+
+        //Rent Room
+        System.out.println("Quantos quartos serao alugador?");
+        int quantidadeQuartos = scanner.nextInt();
+
+
+        Client[] clientes = new Client[10];
+
+        for (int i = 0; i < quantidadeQuartos; i++) {
+            System.out.println("Entre com o quarto a ser alugado para instaciar o objeto");
+            int quarto = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("Entre com o nome e depois email do estudante");
+            String name = scanner.nextLine();
+            String email = scanner.nextLine();
+            clientes[quarto] = new Client(name, email);
+            System.out.println(clientes[quarto]);
+        }
+
+        System.out.println("++++++++++++++++");
+        for (Client client : clientes){
+            System.out.println(client);
+        }
+
+
         System.out.println("Entre com o tamanho do vetor de objeto");
         int n1 = scanner.nextInt();
 
