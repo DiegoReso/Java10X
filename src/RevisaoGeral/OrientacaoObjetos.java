@@ -4,6 +4,28 @@ import java.util.Scanner;
 
 public class OrientacaoObjetos {
     public static void main(String[] args) {
+        //ContaBancaria
+        ContaBancaria conta1 = new ContaBancaria("1234", "Diego Reso");
+
+        conta1.deposit(300.00);
+        conta1.withdraw(100.00);
+        System.out.println(conta1);
+
+        ContaBancaria conta2 = new ContaBancaria("4321", "Cailania", 500.00);
+        conta2.withdraw(50.00);
+        conta2.withdraw(5.00);
+        System.out.println(conta2);
+
+
+        //ObjetoTeste
+        ObjetoTeste objetoTeste = new ObjetoTeste();
+        objetoTeste.setName("Diego");
+        System.out.println(objetoTeste.getName());
+
+        objetoTeste.setAge(35);
+        System.out.println(objetoTeste.getAge());
+        System.out.println(objetoTeste);
+
         //Student
         Student estudante = new Student();
         Double[] notas = {3.0, 3.0, 6.00, 5.00};
