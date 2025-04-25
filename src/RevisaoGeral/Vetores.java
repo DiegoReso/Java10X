@@ -5,19 +5,38 @@ import java.util.Scanner;
 public class Vetores {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        //matriz pegando valores a esquerda direita e acima
+
+        int[][] matriz = {
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12}
+        };
+
+        int numeroEscolhido = 11;
+        mostrarVizinhos(matriz, numeroEscolhido);
+
+
         //Matrizes
+        int[][] matriz1 = new int[2][3];
 
-        int[][] matriz = new int[3][4];
+        for (int i = 0; i < matriz1.length; i++) {
+            for (int j = 0; j < matriz1.length; j++) {
 
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz.length; j++) {
-                matriz[i][j] = j + 1 ;
+                matriz1[i][j] = scanner.nextInt();
             }
         }
 
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz.length; j++) {
-                System.out.println(matriz[i][j]);
+        for (int i = 0; i < matriz1.length; i++) {
+
+                System.out.println(matriz1[i][i]);
+        }
+
+        for (int i = 0; i < matriz1.length; i++) {
+            for (int j = 0; j < matriz1.length; j++) {
+                if(matriz[i][j] < 0){
+                    System.out.println(" Numero negativo na matriz "+ matriz[i][j]);
+                }
             }
         }
 
@@ -81,6 +100,43 @@ public class Vetores {
 
         for (double numero : numerosDouble) {
             System.out.println(numero);
+        }
+
+        scanner.close();
+    }
+
+    public static void mostrarVizinhos(int[][] matriz, int numero) {
+        boolean encontrado = false;
+
+        // Percorre a matriz para encontrar o número
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (matriz[i][j] == numero) {
+                    encontrado = true;
+                    System.out.println("Número " + numero + " encontrado na posição [" + i + "][" + j + "]");
+                    System.out.println("Vizinhos:");
+
+                    // Vizinho acima
+                    if (i > 0) {
+                        System.out.println("Acima: " + matriz[i - 1][j]);
+                    }
+
+                    // Vizinho abaixo
+                    if (i < matriz.length - 1) {
+                        System.out.println("Abaixo: " + matriz[i + 1][j]);
+                    }
+
+                    // Vizinho à esquerda
+                    if (j > 0) {
+                        System.out.println("Esquerda: " + matriz[i][j - 1]);
+                    }
+
+                    // Vizinho à direita
+                    if (j < matriz[i].length - 1) {
+                        System.out.println("Direita: " + matriz[i][j + 1]);
+                    }
+                }
+            }
         }
     }
 }
