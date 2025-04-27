@@ -1,9 +1,21 @@
 package RevisaoGeral;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class OrientacaoObjetos {
     public static void main(String[] args) {
+        //Enum
+        ProdutoUsandoEnum produtoComEnum = new ProdutoUsandoEnum("Smart TV", OderStatusEnum.PROCESSING, new Date());
+
+        System.out.println(produtoComEnum);
+
+        OderStatusEnum os1 = OderStatusEnum.DELIVERED;
+        System.out.println(os1);
+
+        OderStatusEnum os2 = OderStatusEnum.valueOf("SHIPPED");
+        System.out.println(os2);
+
         Scanner scanner = new Scanner(System.in);
         //ContaBancaria
         ContaBancaria conta1 = new ContaBancaria("1234", "Diego Reso");
