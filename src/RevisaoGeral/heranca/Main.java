@@ -1,8 +1,10 @@
 package RevisaoGeral.heranca;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        Account acc = new Account(1001, "Diego", 1000.00);
         BusinessAcount bAcc = new BusinessAcount(1002,"Cailania",0.0, 500.0);
 
         //upcasting
@@ -26,9 +28,6 @@ public class Main {
             System.out.println("Update");
         }
 
-        //override
-        acc.withDraw(200);
-        System.out.println(acc.getBalance());
 
         Account accSavings = new SavingsAccount(1011, "Diego", 1000.00, 0.01);
 
@@ -39,6 +38,26 @@ public class Main {
 
         accBusiness.withDraw(200);
         System.out.println(accBusiness.getBalance());
+
+        //classe abstract
+        List<Account> list = new ArrayList<>();
+        list.add(new BusinessAcount(321, "Diego", 1000.00, 10.0));
+
+        list.add(new SavingsAccount(123,"Cailania", 1500.00, 1.0));
+
+        double sum = 0;
+
+        for (Account acc : list){
+            sum += acc.getBalance();
+        }
+        System.out.printf("Total balance: %.2f%n", sum);
+
+        for (Account acc : list){
+            acc.deposit(10);
+
+            System.out.println(acc.getBalance());
+        };
+
     }
 }
 
