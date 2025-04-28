@@ -23,4 +23,9 @@ public class SavingsAccount extends Account {
     void updateBalance(){
         balance += balance *interestRate;
     }
+
+    @Override
+    void withDraw(double amount) {
+        balance -= amount;
+    }
 }

@@ -35,7 +35,7 @@ public class Account {
     }
 
     void withDraw(double amount){
-        balance -= amount;
+        balance -= amount + 5.0;
     }
 
     void deposit(double amount){

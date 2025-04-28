@@ -2,7 +2,7 @@ package RevisaoGeral.heranca;
 
 public class Main {
     public static void main(String[] args) {
-        Account acc = new Account(1001, "Diego", 0.0);
+        Account acc = new Account(1001, "Diego", 1000.00);
         BusinessAcount bAcc = new BusinessAcount(1002,"Cailania",0.0, 500.0);
 
         //upcasting
@@ -26,7 +26,18 @@ public class Main {
             System.out.println("Update");
         }
 
+        //override
+        acc.withDraw(200);
+        System.out.println(acc.getBalance());
 
+        Account accSavings = new SavingsAccount(1011, "Diego", 1000.00, 0.01);
 
+        accSavings.withDraw(200);
+        System.out.println(accSavings.getBalance());
+
+        Account accBusiness = new BusinessAcount(654654, "Taiwane", 1000.00, 10.0);
+
+        accBusiness.withDraw(200);
+        System.out.println(accBusiness.getBalance());
     }
 }
