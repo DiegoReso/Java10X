@@ -1,6 +1,7 @@
 package RevisaoGeral.heranca;
 
-public class SavingsAccount extends Account {
+//final previne que nenhuma outra classe herde de SavingsAccount
+public final class SavingsAccount extends Account {
     private Double interestRate;
 
     public SavingsAccount() {
