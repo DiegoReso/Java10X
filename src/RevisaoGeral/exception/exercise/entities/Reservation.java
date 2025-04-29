@@ -15,7 +15,11 @@ public class Reservation {
     public Reservation() {
     }
 
-    public Reservation(Integer room, Date checkin, Date checkout) {
+    public Reservation(Integer room, Date checkin, Date checkout) throws DomainException{
+
+        if(!checkout.after(checkin)){
+            throw new DomainException("Check out date must be after check-in");
+        }
         this.room = room;
         this.checkin = checkin;
         this.checkout = checkout;
@@ -28,19 +32,18 @@ public class Reservation {
 
     }
 
-    public String updateDates(Date checkin, Date checkout){
+    public void updateDates(Date checkin, Date checkout) throws DomainException{
 
         Date now = new Date();
 
         if(checkin.before(now) || checkout.before(now)){
-            return"Error in reservation: Check out date must be future";
+            throw new DomainException("Reservation date must be future");
         }
         if(!checkout.after(checkin)){
-            return "Error in reservation: Check out date must be after check-in";
+            throw new DomainException("Check out date must be after check-in");
         }else{
             this.checkin = checkin;
             this.checkout = checkout;
-            return null;
         }
     }
 
