@@ -1,4 +1,4 @@
-package RevisaoGeral;
+package RevisaoGeral.geral;
 
 import java.util.Date;
 

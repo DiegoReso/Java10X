@@ -1,4 +1,4 @@
-package RevisaoGeral;
+package RevisaoGeral.geral;
 
 public class FuncoesMatemmticas {
     public static void main(String[] args) {

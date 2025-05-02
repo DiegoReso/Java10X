@@ -1,4 +1,4 @@
-package RevisaoGeral;
+package RevisaoGeral.geral;
 
 public enum OderStatusEnum {
     PENDING_PAYMENT,

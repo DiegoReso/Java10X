@@ -1,6 +1,4 @@
-package RevisaoGeral;
-
-import org.w3c.dom.ls.LSOutput;
+package RevisaoGeral.geral;
 
 import java.util.Scanner;
 

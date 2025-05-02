@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Program {
     public static void main(String[] args) {
         System.out.println("==================");
+
         File file = new File("C:\\in.txt");
         Scanner sc = null;
 

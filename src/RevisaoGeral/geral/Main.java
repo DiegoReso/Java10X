@@ -1,6 +1,5 @@
-package RevisaoGeral;
+package RevisaoGeral.geral;
 
-import javax.xml.namespace.QName;
 import java.util.Locale;
 import java.util.Scanner;
 

@@ -1,6 +1,5 @@
-package RevisaoGeral;
+package RevisaoGeral.geral;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
