@@ -1,7 +1,7 @@
-package RevisaoGeral.interfaces.model.services;
+package RevisaoGeral.interfaces.exemplo1.model.services;
 
-import RevisaoGeral.interfaces.model.entities.CarRental;
-import RevisaoGeral.interfaces.model.entities.Invoice;
+import RevisaoGeral.interfaces.exemplo1.model.entities.CarRental;
+import RevisaoGeral.interfaces.exemplo1.model.entities.Invoice;
 
 import java.time.Duration;
 

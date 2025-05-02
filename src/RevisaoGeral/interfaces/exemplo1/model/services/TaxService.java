@@ -1,4 +1,4 @@
-package RevisaoGeral.interfaces.model.services;
+package RevisaoGeral.interfaces.exemplo1.model.services;
 
 public interface TaxService {
 

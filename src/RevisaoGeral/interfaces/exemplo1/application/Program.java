@@ -1,9 +1,9 @@
-package RevisaoGeral.interfaces.application;
+package RevisaoGeral.interfaces.exemplo1.application;
 
-import RevisaoGeral.interfaces.model.entities.CarRental;
-import RevisaoGeral.interfaces.model.entities.Vehicle;
-import RevisaoGeral.interfaces.model.services.BrazilTaxService;
-import RevisaoGeral.interfaces.model.services.RentalService;
+import RevisaoGeral.interfaces.exemplo1.model.entities.CarRental;
+import RevisaoGeral.interfaces.exemplo1.model.entities.Vehicle;
+import RevisaoGeral.interfaces.exemplo1.model.services.BrazilTaxService;
+import RevisaoGeral.interfaces.exemplo1.model.services.RentalService;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

@@ -1,4 +1,4 @@
-package RevisaoGeral.interfaces.model.entities;
+package RevisaoGeral.interfaces.exemplo1.model.entities;
 
 public class Vehicle {
     private String carModel;
