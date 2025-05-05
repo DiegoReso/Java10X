@@ -9,7 +9,7 @@ public class CalculationService {
             throw new IllegalStateException("List is empty");
         }
 
-        T max = list.get(0);
+        T max = list.getFirst();
         for (T item : list){
             if(item.compareTo(max) > 0){
                 max = item;
@@ -17,5 +17,4 @@ public class CalculationService {
         }
         return max;
     }
-
 }

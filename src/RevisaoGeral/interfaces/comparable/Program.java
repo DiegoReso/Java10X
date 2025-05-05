@@ -26,6 +26,7 @@ public class Program {
 
             Collections.sort(list);
             for(Employee emp : list){
+
                 System.out.println(emp.getName() + ", " + emp.getSalary());
             }
 

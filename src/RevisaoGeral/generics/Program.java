@@ -11,14 +11,14 @@ import java.util.Objects;
 public class Program {
     public static void main(String[] args) {
 
+
         //wildcard
 
         List<Integer> myInts = Arrays.asList(5,2,10);
         printList(myInts);
 
-        List<String> myStrs = Arrays.asList("Dui" , "Reso" , "Souza");
+        List<String> myStrs = Arrays.asList("Diego", "teste", "123");
         printList(myStrs);
-
 
         //generico demilitado
         List<Produto> prod = new ArrayList<>();
@@ -43,6 +43,7 @@ public class Program {
         }
 
 
+        //generics
         PrintService<String> listaString = new PrintService<>();
         listaString.addValue("Teste String");
         listaString.addValue("String");
@@ -60,10 +61,45 @@ public class Program {
         listaInteiros.print();
 
     }
-
     public static void printList(List<?> list){
+        if(list.isEmpty()){
+            throw new IllegalStateException("Lista is empty");
+        }
         for(Object obj : list){
             System.out.println(obj);
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
