@@ -3,22 +3,54 @@ package SetList;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.time.Instant;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Program {
     public static void main(String[] args) {
+        //exercicio proposto
+        Scanner sc = new Scanner(System.in);
+
+        Set<Integer> a = new HashSet<>();
+        Set<Integer> b = new HashSet<>();
+        Set<Integer> c = new HashSet<>();
+
+        System.out.print("How many students for course A? ");
+        int n = sc.nextInt();
+        for (int i=0; i<n; i++) {
+            int number = sc.nextInt();
+            a.add(number);
+        }
+
+        System.out.print("How many students for course B? ");
+        n = sc.nextInt();
+        for (int i=0; i<n; i++) {
+            int number = sc.nextInt();
+            b.add(number);
+        }
+
+        System.out.print("How many students for course C? ");
+        n = sc.nextInt();
+        for (int i=0; i<n; i++) {
+            int number = sc.nextInt();
+            c.add(number);
+        }
+
+        Set<Integer> total = new HashSet<>(a);
+        total.addAll(b);
+        total.addAll(c);
+
+        System.out.println("Total students: " + total.size());
+
+        sc.close();
+
+
+        System.out.println();
+        System.out.println();
+
         //ler arquivo e pegar usuarion e login
-
-
-
         try(BufferedReader br =  new BufferedReader(new FileReader("C:\\Users\\diego\\Documents\\workspace\\log.txt"))){
 
             DateTimeFormatter formatoData = DateTimeFormatter.ISO_INSTANT
@@ -36,6 +68,8 @@ public class Program {
             for (LogEntry log : listLog){
                 System.out.println(log);
             }
+            System.out.println("Total " + listLog.size());
+
 
 
         }catch (IOException e){
@@ -44,22 +78,22 @@ public class Program {
 
 
 
-        Set<Integer> a = new TreeSet<>(Arrays.asList(0,2,4,6,8,10));
-        Set<Integer> b = new TreeSet<>(Arrays.asList(5,6,7,8,9,10));
+        Set<Integer> a1 = new TreeSet<>(Arrays.asList(0,2,4,6,8,10));
+        Set<Integer> b1 = new TreeSet<>(Arrays.asList(5,6,7,8,9,10));
 
         //union
-        Set<Integer> c = new TreeSet<>(a);
-        c.addAll(b);
-        System.out.println(c);
+        Set<Integer> c1 = new TreeSet<>(a1);
+        c1.addAll(b1);
+        System.out.println(c1);
 
         //intersection
-        Set<Integer> d = new TreeSet<>(a);
-        d.retainAll(b);
+        Set<Integer> d = new TreeSet<>(a1);
+        d.retainAll(b1);
         System.out.println(d);
 
         //difference
-        Set<Integer> e = new TreeSet<>(a);
-        e.removeAll(b);
+        Set<Integer> e = new TreeSet<>(a1);
+        e.removeAll(b1);
         System.out.println(e);
 
 
@@ -76,14 +110,19 @@ public class Program {
 
         Produto prod = new Produto("Notebook", 1200.0);
 
+        System.out.println(set.contains(prod));
+
+        set.removeIf(x -> x.getName() == "TV");
+
         for (Produto p : set){
             System.out.println(p);
         }
+
+        tree.removeIf(x -> x.getName() == "Tablet");
+
         System.out.println();
         for (Produto p : tree){
             System.out.println(p);
         }
-
-
     }
 }
